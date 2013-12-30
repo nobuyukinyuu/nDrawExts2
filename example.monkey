@@ -1,3 +1,5 @@
+#GLFW_WINDOW_TITLE="nDrawExts2 Demo"
+
 Import mojo
 Import nDrawExts2
 
@@ -32,6 +34,12 @@ Class Game Extends App
 	Field FirstLoad:Bool = True
 		
 	Method OnCreate()
+		'Load a stencil buffer. Fixes issues for some users.
+		#If TARGET="glfw"
+			'Oh Mark, please let me specify env consts in here so I don't have to change this in 2 places...
+			 GlfwGame.GetGlfwGame().SetGlfwWindow(640, 480, 8, 8, 8, 0, 0, 8, False)
+		#EndIf
+	
 		bg = LoadImage("monkey.png",, Image.MidHandle)
 		fg = LoadImage("bubble.png",, Image.MidHandle)
 		

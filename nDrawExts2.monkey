@@ -1,4 +1,5 @@
 'nDrawExts2, by Nobuyuki (nobu@subsoap.com).  No warranties implied, use at your own risk
+'Last update:  29 Dec 2013
 
 'Notes/Issues:
 '1:  This doesn't work on HTML5, flash, or XNA.  Only pure ogl targets.
