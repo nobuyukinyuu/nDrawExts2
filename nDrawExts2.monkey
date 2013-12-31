@@ -241,6 +241,15 @@ Class PixelArray
 		color |= (b & $FF)
 		Return color
 	End Function
+	
+	Function ToARGB:Int(color:Int[])
+		Local out:Int
+		out |= (color[0] & $FF) Shl 24
+		out |= (color[1] & $FF) Shl 16
+		out |= (color[2] & $FF) Shl 8
+		out |= (color[3] & $FF)
+		Return color		
+	End Function
 End Class
 
 	
