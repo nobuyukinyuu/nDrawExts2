@@ -1,6 +1,6 @@
 nDrawExts2
 ==========
-![](https://github.com/nobuyukinyuu/nDrawExts2/blob/master/preview.png)
+![](https://github.com/nobuyukinyuu/nDrawExts2/blob/master/preview.png?raw=true)
 
 nDrawExts is a module for Monkey which extends the built-in Mojo's functionality.  This is the second generation of the module, now utilizing gles11 instead of native code blocks, increasing compatibility to all of the major OpenGL targets.
 
