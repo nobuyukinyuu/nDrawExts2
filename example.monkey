@@ -37,7 +37,8 @@ Class Game Extends App
 		'Load a stencil buffer. Fixes issues for some users.
 		#If TARGET="glfw"
 			'Oh Mark, please let me specify env consts in here so I don't have to change this in 2 places...
-			 GlfwGame.GetGlfwGame().SetGlfwWindow(640, 480, 8, 8, 8, 0, 0, 8, False)
+			 'GlfwGame.GetGlfwGame().SetGlfwWindow(640, 480, 8, 8, 8, 0, 0, 8, False)
+			 SetDeviceWindow(640, 480, 16|4)
 		#EndIf
 	
 		bg = LoadImage("monkey.png",, Image.MidHandle)
