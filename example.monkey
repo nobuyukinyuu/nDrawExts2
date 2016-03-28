@@ -36,9 +36,8 @@ Class Game Extends App
 	Method OnCreate()
 		'Load a stencil buffer. Fixes issues for some users.
 		#If TARGET="glfw"
-			'Oh Mark, please let me specify env consts in here so I don't have to change this in 2 places...
-			 'GlfwGame.GetGlfwGame().SetGlfwWindow(640, 480, 8, 8, 8, 0, 0, 8, False)
-			 SetDeviceWindow(640, 480, 16|4)
+			'NOTE:  Flag 128 to enable stencil may require patching.  See http://www.monkey-x.com/Community/posts.php?topic=10454
+			 SetDeviceWindow(640, 480, 16 | 4 | 128)
 		#EndIf
 	
 		bg = LoadImage("monkey.png",, Image.MidHandle)

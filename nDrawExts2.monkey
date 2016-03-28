@@ -8,9 +8,9 @@
 '    You'll pull your hair out trying to figure out why.  Just don't do it.
 '3:  LoadImageData appears to load stuff in ABGR8888. WritePixels expects ARGB8888.
 '    Endianess in MY Monkey?  It's more likely than you think. OGL is big-endian.
-'4:  On glfw, sometimes the stencil buffer is not initialized.  You should call
-'      GlfwGame.GetGlfwGame().SetGlfwWindow( width,height,8,8,8,0,0,8,False )
-'    at the top of OnCreate() to make sure stencil buffer works on all systems.
+'4:  On glfw, some systems don't use the stencil buffer by default.  See
+'    http://www.monkey-x.com/Community/posts.php?topic=10454 for more details.
+'    You can patch glfwgame.cpp to give the proper stencilbits window hint (8).
 
 Import mojo
 Import opengl.gles11
