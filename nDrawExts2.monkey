@@ -137,9 +137,14 @@ Import opengl.gles11
 		glClear(GL_STENCIL_BUFFER_BIT)
 	End Function
 		
-	Function DrawToStencil:Void(enabled:Bool)
+	'Summary:  Sets whether to draw to the stencil buffer.  Set the threshold to -1 to use the alpha threshold.
+	Function DrawToStencil:Void(enabled:Bool, threshold:Float = -1)
 		If enabled
-			glAlphaFunc(GL_GREATER, _ndx_alpha_threshold)
+			If threshold = -1
+				glAlphaFunc(GL_GREATER, _ndx_alpha_threshold)
+			Else
+				glAlphaFunc(GL_GREATER, threshold)
+			End If
 			glEnable(GL_ALPHA_TEST)
 			
 			glColorMask(False, False, False, False)

@@ -98,6 +98,7 @@ Class Game Extends App
 				data = PixelArray.Get("align.png", 8, 8, 48, 48)
 				imgSlice2 = CreateImage(48, 48)
 				imgSlice2.WritePixels(data, 0, 0, 48, 48)
+				'DebugStop
 
 				
 				'Okay that's cool, but how about we some practical usage?
